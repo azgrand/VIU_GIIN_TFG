@@ -8,6 +8,7 @@ from datetime import datetime as dt
 class Report:
 
     def create_report(self):
+        # Crear report
         df = pd.read_csv(conf.Config.PATH_CSV, sep=';')
         df.fillna('', inplace=True)
         self.__improve_report(df)
